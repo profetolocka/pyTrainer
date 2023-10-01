@@ -15,6 +15,10 @@ Basada en la D1 Mini de Wemos, cuenta con un módulo ESP8266 capaz de realizar m
 
 ### Ampliable
 La pyTrainer admite la conexión de distintos módulos que amplian sus capacidades: leds RGB, pulsadores, interruptores, sensores de luz y temperatura, relés son solo algunos de ellos.
+Además, el módulo D1 mini acepta distintos shields que se montan sobre la placa, como un display OLED, un sensor de temperatura o una placa de prototipos.
+
+### Hardware y software libre
+¿Quieres fabricar tu propia PyTrainer? El diseño es Open Hardware, así que puedes descargar los archivos necesarios para fabricar tu propia placa y modificarla a tu gusto.
  
 ## Especificaciones
 * CPU: Wemos D1 mini
