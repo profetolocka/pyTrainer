@@ -1,6 +1,6 @@
 # pyTrainer
-La placa PyTrainer está diseñada para aquellos que desean introducirse en el apasionante mundo del aprendizaje de Micropython. 
-Ha sido diseñada teniendo como objetivo la sencillez y la economía, de manera que pueda ser fabricada y construida por estudiantes o aficionados empleando técnicas caseras.
+La placa PyTrainer está diseñada para aquellos que desean introducirse en el apasionante mundo del aprendizaje de Micropython.   
+Ha sido diseñada teniendo como objetivo la sencillez y la economía, de manera que pueda ser fabricada y construida por estudiantes o aficionados empleando técnicas caseras.   
 A pesar de ello la placa pyTrainer, junto a los distintos módulos a los que se puede conectar, permite realizar una gran cantidad de experiencias y prácticas para aprender a programar en Micropython de una forma sencilla y divertida.
 
 ![Placa pyTrainer versión 3](/images/pytrainer3.png)
