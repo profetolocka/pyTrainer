@@ -33,3 +33,6 @@ Además, el módulo D1 mini acepta distintos shields que se montan sobre la plac
 * Entradas analógicas: Una con un rango de 0 a 5V.
 * Otros: Zumbador activo (Buzzer).
 * Ampliación: Dos conectores I2C.
+
+
+[Toda la información en la Wiki](https://github.com/profetolocka/pyTrainer/wiki)
