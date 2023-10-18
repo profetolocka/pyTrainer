@@ -2,8 +2,10 @@
 #Ernesto Tolocka 2023
 #www.profetolocka.com.ar/pytrainer
 
+from hcsr04 import HCSR04
+
 #Mapeo Dx a GPIOx
-D0 = 16
+D0 = 16       
 D1 = 5
 D2 = 4
 D3 = 0
@@ -18,6 +20,16 @@ from machine import Pin, ADC
 
 #Entrada analogica
 A0 = ADC (0)
+
+#Medidor de distancias
+medidor = HCSR04 (trigger_pin=D2 , echo_pin=D1)
+
+def distancia_cm ():
+    return medidor.distance_cm ()
+
+def distancia_mm ():
+    return medidor.distance_mm ()
+
 
 #Leds
 ledVerde = Pin (D6, Pin.OUT, value=0)
