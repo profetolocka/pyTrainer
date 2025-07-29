@@ -3,6 +3,7 @@
 #www.profetolocka.com.ar/pytrainer
 
 from hcsr04 import HCSR04
+import network
 
 #Mapeo Dx a GPIOx
 D0 = 16       
@@ -57,4 +58,21 @@ E0 = Pin (D4, Pin.IN, Pin.PULL_UP)
 E1 = Pin (D3, Pin.IN, Pin.PULL_UP)
 E2 = Pin (D5, Pin.IN)
 
+#Wifi
+def conectaWifi (red, password):
+    global miRed
+    miRed = network.WLAN(network.STA_IF)     
+    if not miRed.isconnected():              #Si no está conectado…
+        miRed.active(True)                   #activa la interface
+        miRed.connect(red, password)         #Intenta conectar con la red
+        print('Conectando a la red', red +"…")
+        timeout = time.time ()
+        while not miRed.isconnected():           #Mientras no se conecte..
+            if (time.ticks_diff (time.time (), timeout) > 10):
+                return False
+    
+    print ("Conexión exitosa!")
+    print('Datos de la red (IP/netmask/gw/DNS):', miRed.ifconfig())
+      
+    return True
 
