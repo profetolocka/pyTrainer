@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "PyTrainer")(type "KiCad")(uri "$(KIPRJMOD)/PyTrainer.pretty")(options "")(descr ""))
+)
