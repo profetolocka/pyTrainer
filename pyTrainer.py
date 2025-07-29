@@ -3,7 +3,7 @@
 #www.profetolocka.com.ar/pytrainer
 
 from hcsr04 import HCSR04
-import network
+import network,time
 
 #Mapeo Dx a GPIOx
 D0 = 16       
