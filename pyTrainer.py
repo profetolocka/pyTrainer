@@ -3,7 +3,7 @@
 #www.profetolocka.com.ar/pytrainer
 
 from hcsr04 import HCSR04
-import network,time
+import network, time
 
 #Mapeo Dx a GPIOx
 D0 = 16       
@@ -17,7 +17,7 @@ D7 = 13
 D8 = 15
 
 
-from machine import Pin, ADC
+from machine import Pin, ADC, PWM
 
 #Entrada analogica
 A0 = ADC (0)
@@ -46,16 +46,22 @@ S0 = Pin (D6, Pin.OUT, value=0)
 S1 = Pin (D8, Pin.OUT, value=0)
 S2 = Pin (D0, Pin.OUT, value=0)
 
-#Buzzer
-buzzer = Pin (D7, Pin.OUT, value=0)
+#Buzzer activo
+buzzer = Pin (D7, Pin.OUT, value=0) 
+
+#buzzer pasivo
+def bip (duracion):
+    zumbador = PWM (Pin(D7), freq=5000, duty=512)
+    time.sleep (duracion)
+    zumbador.deinit ()
 
 #Teclas
 SW0 = Pin (D4, Pin.IN, Pin.PULL_UP)
 SW1 = Pin (D3, Pin.IN, Pin.PULL_UP)
 
 #Entradas
-E0 = Pin (D4, Pin.IN, Pin.PULL_UP)
-E1 = Pin (D3, Pin.IN, Pin.PULL_UP)
+E0 = Pin (D4, Pin.IN, Pin.PULL_UP) 
+E1 = Pin (D3, Pin.IN, Pin.PULL_UP) 
 E2 = Pin (D5, Pin.IN)
 
 #Wifi
