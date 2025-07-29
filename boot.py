@@ -11,3 +11,4 @@ gc.collect()
 import network
 ap = network.WLAN(network.AP_IF) # create access-point interface
 ap.active(False)         # deactivate the interface
+   
