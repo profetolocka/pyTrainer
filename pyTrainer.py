@@ -1,9 +1,9 @@
 #Definiciones de entradas y salidas de la placa PyTrainer
-#Ernesto Tolocka 2023
+#Ernesto Tolocka 2023-2025
 #www.profetolocka.com.ar/pytrainer
 
 from hcsr04 import HCSR04
-import network, time
+import network, time, dht
 
 #Mapeo Dx a GPIOx
 D0 = 16       
@@ -47,7 +47,7 @@ S1 = Pin (D8, Pin.OUT, value=0)
 S2 = Pin (D0, Pin.OUT, value=0)
 
 #Buzzer activo
-buzzer = Pin (D7, Pin.OUT, value=0) 
+buzzer = Pin (D7, Pin.OUT, value=0)  
 
 #buzzer pasivo
 def bip (duracion):
@@ -81,4 +81,7 @@ def conectaWifi (red, password):
     print('Datos de la red (IP/netmask/gw/DNS):', miRed.ifconfig())
       
     return True
+
+## Sensor DHT11
+sensorTH = dht.DHT11 (Pin(D5))
 
